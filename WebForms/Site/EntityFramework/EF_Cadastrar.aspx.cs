@@ -1,0 +1,68 @@
+﻿using Domain.Entities;
+using Service.Impl;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace WebForms.Site.EntityFramework
+{
+    public partial class EF_Cadastrar : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!Page.IsPostBack)
+            {
+                if (!String.IsNullOrEmpty(Request.QueryString["ID"]))
+                {
+                    int codigo = Convert.ToInt32(Request.QueryString["ID"]);
+                    CarregarFormulario(codigo);
+                }
+            }
+        }
+
+        private void CarregarFormulario(int codigo)
+        {
+            ClienteService srv = new ClienteService();
+            var cliente = srv.Obter(codigo);
+
+            if (cliente != null)
+            {
+                txtCPF.Text = cliente.CPF;
+                txtNome.Text = cliente.Nome;
+                txtTelefone.Text = cliente.Telefone;
+                Endereco.CodigoUF = cliente.UF.ID;
+                Endereco.CodigoCidade = cliente.Cidade.ID;
+                Endereco.Logradouro = cliente.Logradouro;
+                Endereco.Numero = cliente.Numero;
+                Endereco.CEP = cliente.CEP;
+                //txtEndreco.Text = cliente.Logradouro;
+            }
+        }
+
+        protected void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Domain.Entities.Cliente cli = new Domain.Entities.Cliente();
+
+            if (!String.IsNullOrEmpty(Request.QueryString["ID"]))
+            {
+                cli.ID = Convert.ToInt32(Request.QueryString["ID"]);
+            }
+
+            cli.CPF = txtCPF.Text;
+            cli.Nome = txtNome.Text;
+            cli.Telefone = txtTelefone.Text;
+            //cli.Logradouro = txtEndreco.Text;
+            cli.UF = new UF() { ID = Endereco.CodigoUF };
+            cli.Cidade = new Cidade(cli.UF) { ID = Endereco.CodigoCidade };
+            cli.Logradouro = Endereco.Logradouro;
+            cli.Numero = Endereco.Numero;
+            cli.CEP = Endereco.CEP;
+
+            ClienteService srv = new ClienteService();
+            srv.Salvar(cli);
+        }
+    }
+}

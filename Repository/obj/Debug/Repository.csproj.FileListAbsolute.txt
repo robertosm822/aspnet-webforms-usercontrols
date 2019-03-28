@@ -1,0 +1,14 @@
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_ADO\Projeto\ASP.NET\Repository\bin\Debug\Repository.dll
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_ADO\Projeto\ASP.NET\Repository\bin\Debug\Repository.pdb
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_ADO\Projeto\ASP.NET\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_ADO\Projeto\ASP.NET\Repository\obj\Debug\Repository.dll
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_ADO\Projeto\ASP.NET\Repository\obj\Debug\Repository.pdb
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_ADO\Projeto\ASP.NET\Repository\bin\Debug\Domain.dll
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_ADO\Projeto\ASP.NET\Repository\bin\Debug\Domain.pdb
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_EF\Projeto\ASP.NET\Repository\bin\Debug\Repository.dll
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_EF\Projeto\ASP.NET\Repository\bin\Debug\Repository.pdb
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_EF\Projeto\ASP.NET\Repository\bin\Debug\Domain.dll
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_EF\Projeto\ASP.NET\Repository\bin\Debug\Domain.pdb
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_EF\Projeto\ASP.NET\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_EF\Projeto\ASP.NET\Repository\obj\Debug\Repository.dll
+E:\_ANYBAL\_SchoolOfNet\ASP.NET_WF_EF\Projeto\ASP.NET\Repository\obj\Debug\Repository.pdb
